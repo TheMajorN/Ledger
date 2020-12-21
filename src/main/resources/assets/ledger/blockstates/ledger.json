@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "ledger:block/ledger" },
+    "facing=south": { "model": "ledger:block/ledger", "y":  180},
+    "facing=west": { "model": "ledger:block/ledger", "y":  270},
+    "facing=east": { "model": "ledger:block/ledger", "y":  90}
+  }
+}
