@@ -2,7 +2,6 @@ package com.themajorn.ledger.util;
 
 import com.themajorn.ledger.blocks.ledgerBase;
 import com.themajorn.ledger.ledger;
-import com.themajorn.ledger.tileEntity.ledgerContainer;
 import com.themajorn.ledger.tileEntity.ledgerTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.inventory.container.ContainerType;
@@ -13,7 +12,6 @@ import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.common.extensions.IForgeContainerType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.network.IContainerFactory;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -44,11 +42,4 @@ public class registryHandler {
 
     public static final RegistryObject<TileEntityType<ledgerTileEntity>> LEDGER_TILE = TILE_ENTITY_TYPES.register("ledger_tile",
                         () -> TileEntityType.Builder.create(ledgerTileEntity::new, LEDGER.get()).build(null));
-
-
-    //Container Types
-    //----------
-
-    public static final RegistryObject<ContainerType<ledgerContainer>>LEDGER_CONTAINER = CONTAINER_TYPES.register("ledger1",
-                        () -> IForgeContainerType.create(ledgerContainer::new));
 }
